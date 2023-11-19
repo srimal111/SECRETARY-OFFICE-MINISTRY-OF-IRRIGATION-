@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahaweli Authority Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #8e44ad, #2980b9);
+            color: #fff;
+        }
+
+        header {
+           
+            text-align: center;
+        }
+
+        section {
+          
+            text-align: center;
+        }
+
+        .card_one {
+            background: #cfffd5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: auto;
+            text-align: left;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: auto;
+            text-align: left;
+        }
+
+        button {
+           border-radius: 15px;
+           background-color: #8e44ad;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.5s ease;
+            width:100%;
+        }
+        h3,p,h2{
+        color: black;
+      
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h1>SECRETARY OFFICE <br> (MINISTRY OF IRRIGATION)</h1>
+        <!-- User Card -->
+
+
+        <div class="card_one">
+            <h2>SECRETARY OFFICE (MINISTRY OF IRRIGATION)</h2>
+            <h2>10 Floor</h2>
+            <p style="color: gray;">office line contact center</p>
+            <p>Fax: <span id="a">011-2676846</span></p>
+            <p style="font-weight: bold;">In Com: <span id="a"> 260 </span></p>
+            <p>Call Landline: <span id="secretary_office_land_line">011-2676844  </span></p>
+            <p>Call Mobile: <span id="">None</span></p>
+            <p>Email Line One: <span id="email_one">sec@mahaweli.gov.lk</span></p>
+            <p>Email Line Two: <span id="email_two">irrimin123@gmail.com</span></p>
+            <!-- Buttons -->
+            <button onclick="callNumber('secretary_office_land_line')">Call Landline</button>
+            <button onclick="openEmailApp_one()">Send Email Line One</button>
+            <button onclick="openEmailApp_two()">Send Email Line Two</button>
+
+            <script>
+                function openEmailApp_one() {
+                    var email_one = document.getElementById('email_one').textContent;
+                    window.location.href = 'mailto:' + email_one;
+                }
+                function openEmailApp_two() {
+                    var email_two = document.getElementById('email_two').textContent;
+                    window.location.href = 'mailto:' + email_two;
+                }
+        
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mr. U.D.C. Jayalal</h2>
+            <p style="color: gray;">Designation: Secretary </p>
+            <p>Fax: <span id="">011-2676846</span></p>
+            <p style="font-weight: bold;">In Com: <span id="a">206</span></p>
+            <p>Call Landline Line one: <span id="Secretary_land_line_one">011-2676844</span></p>
+            <p>Call Landline Line two: <span id="Secretary_land_line_two">011-2687141</span></p>
+            <p>Call Mobile: <span id="Secretary_mobile_line">071-6814813</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('Secretary_land_line_one')">Call Landline</button>
+            <button onclick="callNumber('Secretary_land_line_two')">Call Landline</button>
+            <button onclick="callNumber('Secretary_mobile_line', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+        <div class="card">
+            <h2>Mr. W.N. Jayasinghe </h2>
+            <p style="color: gray;">Designation: Co-ordinating Secretary </p>
+            <p>Fax: <span id="">011-2676846</span></p>
+            <p style="font-weight: bold;">In Com: <span id="">208</span></p>
+            <p>Call Landline: <span id="co_ordinating_secretary_land_line">011-2676844 </span></p>
+            <p>Call Mobile: <span id="co_ordinating_secretary_mobile_line">071-2400347</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('co_ordinating_secretary_land_line')">Call Landline</button>
+            <button onclick="callNumber('co_ordinating_secretary_mobile_line', true)">Call Mobile</button>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+        <!-- More content goes here -->
+        <footer>
+            <p style="color: white;">Developmet & Publish by Department of IT - Sri lanka Mahaweli Aithority </p>
+        </footer>
+    </section>
+</body>
+</html>
